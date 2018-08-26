@@ -1,0 +1,19 @@
+{
+  "name": "progress-bar-vanilla-js",
+  "version": "1.0.0",
+  "description": "Progress Bar",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "babel-preset-env": "1.6.1",
+    "babel-preset-react": "6.24.1",
+    "babel-runtime": "6.26.0"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.6.1"
+  },
+  "keywords": []
+}
