@@ -28,44 +28,22 @@
 </head>
 
 <body>
-	
-	
+	<script src="./src/ProgressBar.js"> </script>
 	<div class="progress-bar">
 		<div class="progress-bar-value"> 65% </div>
 		<div class="progress-bar-fill"> </div>
 	</div>
 	<script>
-			class ProgressBar {
-					constructor(element, initialValue =0){
-						this.valueElemem = element.querySelector('.progress-bar-value');
-						this.fillElemem = element.querySelector('.progress-bar-fill');			
-						this.setValue(initialValue);
-					}
-
-					setValue(initialValue) { 
-						if(initialValue < 0){
-							this.initialValue = 0;
-					 	 }
-
-						 if(initialValue > 100){ 
-							 this.initialValue= 100 ; 
-						}						
-						
-						this.value = initialValue;
-						this.update();		 
-					}
-
-				update(){
-					const percentage = this.value + '%';
-					this.valueElemem.textContent = percentage;
-					this.fillElemem.style.width =  percentage;
-					
-				}
-
-			}
-       
 			const bar = new ProgressBar(document.querySelector('.progress-bar'),80);
+			const changeValue = (value)=>{
+				bar.setValue(value);
+			}
 	</script>
+
+	<h2> set the bar value :</h2>
+	<input id="valor" type="tel"/>
+	<button onclick="changeValue(document.getElementById('valor').value)"> Change</button>
+
 </body>
 
 </html>
